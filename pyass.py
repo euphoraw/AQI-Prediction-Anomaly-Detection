@@ -2,11 +2,11 @@ import serial
 import time
 from azure.iot.device import IoTHubDeviceClient, Message
 
-# Replace this with your actual IoT Central device connection string
+
 CONNECTION_STRING = "HostName=iotc-05a4a17e-e76d-41f2-96fe-bfe6865dbff8.azure-devices.net;DeviceId=240fmqjcgdr;SharedAccessKey=3V2P1KCrTJOYhtRVLga4spAgOMY9ftw6QJAxDSHo48I="
 
 # Setup serial communication with Arduino
-ser = serial.Serial('COM5', 9600)  # Make sure this is your actual COM port
+ser = serial.Serial('COM5', 9600)  
 
 # Create IoT Hub client
 client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
